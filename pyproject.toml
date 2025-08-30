@@ -1,0 +1,35 @@
+[tool.briefcase]
+project_name = "Hello World"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/hello-world"
+license = "BSD-3-Clause"
+author = "Your Name"
+author_email = "you@example.com"
+
+[tool.briefcase.app.helloworld]
+formal_name = "Hello World"
+description = "First Android app in Python using BeeWare"
+sources = ["src/helloworld"]
+
+# Platform-specific backend dependencies
+[tool.briefcase.app.helloworld.windows]
+requires = [
+    "toga-winforms>=0.4.7,<0.5",
+]
+
+[tool.briefcase.app.helloworld.macOS]
+requires = [
+    "toga-cocoa>=0.4.7,<0.5",
+]
+
+[tool.briefcase.app.helloworld.linux]
+requires = [
+    "toga-gtk>=0.4.7,<0.5",
+]
+
+[tool.briefcase.app.helloworld.android]
+requires = [
+    "toga-android>=0.4.7,<0.5",
+]
+
